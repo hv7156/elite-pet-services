@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Pet Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pets">Pets</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#recommendation">Pet Recommendation</a></li>
+                <li><a href="#payment">Payment Options</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart-summary">Cart (<span id="total-items">0</span>)</a></li> <!-- Cart Link -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1><b>Welcome to Elite Pet Service</b></h1>
+        <p><b>Your one-stop solution for finding and caring for your perfect pet.</b></p>
+        <button>Explore Pets</button>
+    </section>
+
+    <!-- Pets Section -->
+    <section id="pets">
+        <h2>Available Pets</h2>
+        <div class="pet-grid">
+            <div class="pet-card">
+                <img src="/Users/harivanshkumarsharma/Downloads/lebra.jpg" alt="Labrador">
+                <h3>Labrador</h3>
+                <p>Age: 1 year</p>
+                <p>Price:  &#8377; 15000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="pet-card">
+                <img src="/Users/harivanshkumarsharma/Downloads/germanbahi.jpg" alt="German Shepherd">
+                <h3>German Shepherd</h3>
+ <p>Age: 2 years</p>
+                <p>Price:  &#8377; 16000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="pet-card">
+                <img src="/Users/harivanshkumarsharma/Downloads/golden.jpg" alt="Golden Retriever">
+                <h3>Golden Retriever</h3>
+                <p>Age: 1.5 years</p>
+                <p>Price: &#8377; 21000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="pet-card">
+                <img src="/Users/harivanshkumarsharma/Downloads/Siamese Cat.jpg" alt="Siamese Cat">
+                <h3>Siamese Cat</h3>
+                <p>Age: 6 months</p>
+                <p>Price: &#8377; 11000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="pet-card">
+                <img src="/Users/harivanshkumarsharma/Downloads/ragdoll.jpg" alt="Ragdoll Cat">
+                <h3>Ragdoll Cat</h3>
+                <p>Age: 1 year</p>
+                <p>Price:  &#8377; 13000</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Pet Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="/Users/harivanshkumarsharma/Downloads/grooming kit.jpg" alt="Grooming Product">
+                <h3>Grooming Kit</h3>
+                <p>Price:  &#8377; 6000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/Users/harivanshkumarsharma/Downloads/pedigree.jpg" alt="Dietary Product">
+                <h3>Pedigree</h3>
+                <p>Price:  &#8377; 400</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/Users/harivanshkumarsharma/Downloads/nylon.jpg" alt="Pet Belt">
+                <h3>Dog Belt</h3>
+                <p>Price:  &#8377; 250</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/Users/harivanshkumarsharma/Downloads/catfoods.jpg" alt="Cat Food">
+                <h3>Cat Food</h3>
+                <p>Price:  &#8377; 350</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/Users/harivanshkumarsharma/Downloads/clothes.jpg" alt="Dog Clothes">
+                <h3>Dog Clothes</h3>
+                <p>Price:  &#8377; 1200</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/Users/harivanshkumarsharma/Downloads/ragdollclothes.jpg" alt="Cat Clothes">
+                <h3>Cat Clothes</h3>
+                <p>Price:  &#8377; 1100</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Summary Section -->
+    <section id="cart-summary">
+        <h2>Cart Summary</h2>
+        <p>Total Items: <span id="total-items">0</span></p>
+        <p>Total Price: <span id="total-price">&#8377; 0</span></p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Pet Consultation</h3>
+                <p>Expert advice on pet care and behavior.</p>
+                <p>Price:  &#8377; 2100</p>
+                <button>Book Now</button>
+            </div>
+            <div class="service-card">
+                <h3>Pet Grooming</h3>
+                <p >Professional grooming services for your pets.</p>
+                <p>Price:  &#8377; 1100</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pet Recommendation Section -->
+    <section id="recommendation">
+        <h2>Find Your Perfect Pet</h2>
+        <form>
+            <label for="climate">Select Climate:</label>
+            <select id="climate" name="climate">
+                <option value="hot">Hot</option>
+                <option value="cold">Cold</option>
+                <option value="temperate">Temperate</option>
+            </select>
+            <label for="needs">Select Needs:</label>
+            <select id="needs" name="needs">
+                <option value="low-maintenance">Low Maintenance</option>
+                <option value="high-maintenance">High Maintenance</option>
+            </select>
+            <button>Find Pet</button>
+        </form>
+        <div id="pet-recommendation">
+            <!-- Display recommended pets here -->
+        </div>
+    </section>
+
+    <!-- Payment Options Section -->
+    <section id="payment">
+        <h2>Payment Options</h2>
+        <p>We offer various payment options for your convenience:</p>
+        <ul>
+            <li>Cash</li>
+            <li>Credit/Debit Card</li>
+            <li>EMI (Easy Monthly Installments)</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>Contact us for any queries or concerns:</p>
+        <ul>
+            <li>Phone: 9523985175</li>
+            <li>Email: elitepetservice@gmail.com</li>
+            <li>Address: Knowledge Park 3, Sharda University, Uttar Pradesh</li>
+        </ul>
+    </section>
+    
+    <script src="script.js"></script> 
+</body>
+</html>
