@@ -27,7 +27,7 @@ function navigateTo(sectionId) {
     section.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Attach event listeners
+
 document.addEventListener('DOMContentLoaded', () => {
     // Add event listener to the Explore Pets button
     const exploreButton = document.querySelector('#home button');
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navigateTo(sectionId);
         });
     });
-    // Define the cart array
+    // Initialize the cart array
 let cart = [];
 
 // Function to add items to the cart
@@ -82,7 +82,7 @@ function updateCartSummary() {
     
     // Update the DOM elements with the new totals
     document.getElementById('total-items').innerText = totalItems;
-    document.getElementById('total-price').innerText = `&#8377; ${totalPrice}`;
+    document.getElementById('total-price').innerHTML = `&#8377; ${totalPrice}`;
 }
 
 // Function to initialize event listeners for add to cart buttons
