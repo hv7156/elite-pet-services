@@ -55,4 +55,54 @@ document.addEventListener('DOMContentLoaded', () => {
             navigateTo(sectionId);
         });
     });
+    // Define the cart array
+let cart = [];
+
+// Function to add items to the cart
+function addToCart(id, name, price) {
+    // Check if the item already exists in the cart
+    const existingItem = cart.find(item => item.id === id);
+    
+    if (existingItem) {
+        // If it exists, update the quantity
+        existingItem.quantity += 1;
+    } else {
+        // If it doesn't exist, add a new item with quantity 1
+        cart.push({ id, name, price, quantity: 1 });
+    }
+    
+    // Update the cart summary
+    updateCartSummary();
+}
+
+// Function to calculate and display the total amount and total items
+function updateCartSummary() {
+    const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+    const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    
+    // Update the DOM elements with the new totals
+    document.getElementById('total-items').innerText = totalItems;
+    document.getElementById('total-price').innerText = `&#8377; ${totalPrice}`;
+}
+
+// Function to initialize event listeners for add to cart buttons
+function initializeCartButtons() {
+    const buttons = document.querySelectorAll('.pet-card button, .product-card button');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const card = button.closest('.pet-card') || button.closest('.product-card');
+            const name = card.querySelector('h3').innerText;
+            const priceText = card.querySelector('p').innerText;
+            const price = parseInt(priceText.replace(/[^0-9]/g, '')); // Extract numeric value
+            
+            addToCart(Date.now(), name, price); // Use Date.now() as a unique ID
+        });
+    });
+}
+
+// Initialize event listeners when the document is ready
+document.addEventListener('DOMContentLoaded', () => {
+    initializeCartButtons();
+});
 });
